@@ -36,6 +36,9 @@ gem 'devise'
 gem 'simple_form'
 # gem for bootstrap
 gem 'bootstrap-sass', '~>3.2.0'
+# gem for font-awesome
+gem 'font-awesome-rails'
+
 gem 'autoprefixer-rails'
 
 group :development, :test do
