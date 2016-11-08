@@ -1,1 +1,5 @@
-<h1>THis is the new book path</h1>
+<%= simple_form_for @book do |f| %>
+  <%= f.input :title %>
+  <%= f.input :content %>
+  <%= f.button :submit %>
+<% end %>
