@@ -1,40 +1,49 @@
-<div class="table-responsive">
-  <table class="table table-bordered">
-    <thead>
-      <tr>
-        <th>#</th>
-        <th>Title</th>
-        <th>Content</th>
-        <th>Show</th>
-        <th>Update</th>
-        <th>Delete</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @books.each do |book| %>
-      <tr>
-        <th scope="row">
-          <%= book.id %>
-        </th>
-        <td>
-          <%= book.title %>
-        </td>
-        <td>
-          <%= book.content %>
-        </td>
-        <td>
-          <%= link_to "Show details", book_path(book) %>
-        </td>
-        <td>
-          <%= link_to "Update book", edit_book_path(book) %>
-        </td>
-        <td>
-          <%= link_to "Delete book", book_path(book), method: :delete, data: { confirm: 'Are you sure?' } %>
-        </td>
-      </tr>
-      <% end %>
-    </tbody>
-  </table>
-</div>
+<header>
+    <div class="header-content">
+        <div class="header-content-inner">
+          <div class="container">
+            <div class="table-responsive">
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Title</th>
+                    <th>Content</th>
+                    <th>Show</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <% @books.each do |book| %>
+                  <tr>
+                    <th scope="row">
+                      <%= book.id %>
+                    </th>
+                    <td>
+                      <%= book.title %>
+                    </td>
+                    <td>
+                      <%= book.content %>
+                    </td>
+                    <td>
+                      <%= link_to "Show details", book_path(book) %>
+                    </td>
+                    <td>
+                      <%= link_to "Update book", edit_book_path(book) %>
+                    </td>
+                    <td>
+                      <%= link_to "Delete book", book_path(book), method: :delete, data: { confirm: 'Are you sure?' } %>
+                    </td>
+                  </tr>
+                  <% end %>
+                </tbody>
+              </table>
+            </div>
 
-<%= link_to "Create New Book", new_book_path %>
+            <%= link_to "Create New Book", new_book_path %>
+
+          </div>
+        </div>
+    </div>
+</header>

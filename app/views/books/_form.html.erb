@@ -1,0 +1,13 @@
+<header>
+    <div class="header-content">
+        <div class="header-content-inner">
+          <div class="container">
+            <%= simple_form_for @book do |f| %>
+              <%= f.input :title %>
+              <%= f.input :content %>
+              <%= f.button :submit %>
+            <% end %>
+          </div>
+        </div>
+    </div>
+</header>
