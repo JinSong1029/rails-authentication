@@ -1,4 +1,5 @@
 class BooksController < ApplicationController
+  before_action :authenticate_user!
 
   def index
     @books = Book.all
@@ -21,7 +22,7 @@ class BooksController < ApplicationController
 
   def destroy
   end
-  
+
   private
     def book_params
       params.require(:book).permit(:title, :content)
