@@ -14,7 +14,7 @@ class BooksController < ApplicationController
   end
 
   def create
-    @book = Book.new(book_params)
+    @book = current_user.books.new(book_params)
     if @book.save
       redirect_to @book
     end
@@ -35,6 +35,10 @@ class BooksController < ApplicationController
   end
 
   def destroy
+    @book = Book.find(params[:id])
+    @book.destroy
+
+    redirect_to books_path
   end
 
   private
