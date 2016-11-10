@@ -9,10 +9,24 @@ class BooksController < ApplicationController
     @book = Book.new
   end
 
+  def edit
+    @book = Book.find(params[:id])
+  end
+
   def create
-    @book = Book.new( book_params )
+    @book = Book.new(book_params)
     if @book.save
       redirect_to @book
+    end
+  end
+
+  def update
+    @book = Book.find(params[:id])
+
+    if @book.update(book_params)
+      redirect_to @book
+    else
+      render 'edit'
     end
   end
 
