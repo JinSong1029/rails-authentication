@@ -11,30 +11,21 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
+              <li>
+                <%= link_to "Find books", books_path, class:"page-scroll" %>
+              </li>
+              <% if user_signed_in? %>
                 <li>
-                    <a class="page-scroll" href="#about">About</a>
+                    <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "page-scroll" %>
+                </li>
+              <% else %>
+                <li>
+                    <%= link_to "SignUp", new_user_registration_path, class: "page-scroll" %>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#services">Services</a>
+                    <%= link_to "Login", new_user_session_path, class:"page-scroll" %>
                 </li>
-                <li>
-                    <a class="page-scroll" href="#portfolio">Portfolio</a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="#contact">Contact</a>
-                </li>
-                <% if user_signed_in? %>
-                  <li>
-                      <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "page-scroll" %>
-                  </li>
-                <% else %>
-                  <li>
-                      <%= link_to "SignUp", new_user_registration_path, class: "page-scroll" %>
-                  </li>
-                  <li>
-                      <%= link_to "Login", new_user_session_path, class:"page-scroll" %>
-                  </li>
-                <% end %>
+              <% end %>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
