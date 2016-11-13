@@ -15,7 +15,6 @@ class BooksController < ApplicationController
 
   def create
     @book = current_user.books.new(book_params)
-    if @book.errors.any?
 
     if @book.save
       redirect_to @book
