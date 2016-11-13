@@ -9,6 +9,7 @@
                     <th>#</th>
                     <th>Title</th>
                     <th>Content</th>
+                    <th>Price</th>
                     <th>Show</th>
                     <th>Update</th>
                     <th>Delete</th>
@@ -25,6 +26,9 @@
                     </td>
                     <td>
                       <%= book.content %>
+                    </td>
+                    <td>
+                      <%= book.price %>
                     </td>
                     <td>
                       <%= link_to "Show details", book_path(book) %>
