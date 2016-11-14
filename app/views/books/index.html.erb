@@ -45,8 +45,47 @@
               </table>
             </div>
 
+            <div style="width:100%">
+              <div id="map" style='width: 100%; height: 400px;'></div>
+            </div>
+
             <%= link_to "Create New Book", new_book_path %>
 
+            <% content_for :js do %>
+              <script src="//maps.google.com/maps/api/js?key=AIzaSyA0HdmhzVt5u8-luM0E6JlFRAZimQA6eb4"></script>
+              <script>
+                var initializeMap = function() {
+                  var handler;
+                  handler = Gmaps.build("Google");
+                  handler.buildMap({
+                    provider: {
+                      //maxZoom: 15,
+                      //minZoom: 10
+                      Zoom: 2
+                    },
+                    internal: {
+                      id: "map"
+                    }
+                  }, function() {
+                    <% @books.each do |book| %>
+                    var markers;
+                    //alert("<%= book.latitude %>")
+                    markers = handler.addMarkers([
+                      {
+                        lat: <%= book.latitude %>,
+                        lng: <%= book.longitude %>,
+                        infowindow: "holla"
+                      }
+                    ]);
+                    <% end %>
+                    //handler.bounds.extendWith(markers);
+                    //handler.fitMapToBounds();
+                  });
+                };
+
+                initializeMap();
+              </script>
+            <% end %>
           </div>
         </div>
     </div>
