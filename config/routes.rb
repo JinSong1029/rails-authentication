@@ -6,4 +6,5 @@ Rails.application.routes.draw do
 
   #definition of resources for book management
   resources :books
+  resources :cities
 end
