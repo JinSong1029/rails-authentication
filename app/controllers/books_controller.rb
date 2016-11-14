@@ -3,6 +3,10 @@ class BooksController < ApplicationController
 
   def index
     @books = Book.all
+    @hash = Gmaps4rails.build_markers(@books) do |book, marker|
+      marker.lat book.latitude
+      marker.lng book.longitude
+    end
   end
 
   def new
