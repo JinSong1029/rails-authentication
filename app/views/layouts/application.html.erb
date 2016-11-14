@@ -29,8 +29,17 @@
     <%= yield %>
   </body>
 <script type="text/javascript">
-  handler = Gmaps.build('Google');
-  handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+handler = Gmaps.build('Google');
+handler.buildMap({
+  provider: {
+    disableDefaultUI: true
+    // pass in other Google Maps API options here
+  },
+  internal: {
+    id: 'map'
+  }
+},
+function(){
   markers = handler.addMarkers([
     {
       "lat": 0,
@@ -45,6 +54,7 @@
   ]);
   handler.bounds.extendWith(markers);
   handler.fitMapToBounds();
-  });
+}
+);
 </script>
 </html>
