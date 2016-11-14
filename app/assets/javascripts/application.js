@@ -16,5 +16,8 @@
 //= require scrollreveal
 //= require jquery.magnific-popup.min
 //= require creative
+//= require markerclusterer
+//= require underscore
+//= require gmaps/google
 //= require turbolinks
 //= require_tree .
