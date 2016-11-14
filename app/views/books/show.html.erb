@@ -1,7 +1,7 @@
 <header>
     <div class="header-content">
         <div class="header-content-inner">
-          <div class="container">
+          <div>
             <h1> this is the details of book</h1>
             <h3> Title : <%= @book.title %> </h3>
             <h3> Content : <%= @book.content %> </h3>
@@ -15,6 +15,7 @@
         </div>
     </div>
 </header>
+
 <% content_for :js do %>
   <script src="//maps.google.com/maps/api/js?key=AIzaSyA0HdmhzVt5u8-luM0E6JlFRAZimQA6eb4"></script>
   <script>
