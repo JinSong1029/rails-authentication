@@ -8,7 +8,7 @@
             <h3> Price : <%= @book.price %> </h3>
             <h3> City : <%= @book.city %> </h3>
             <div style="width:100%">
-              <div id="map" style='width: 100%; height: 400px;'></div>
+              <div id="single_map" style='width: 100%; height: 400px;'></div>
             </div>
             <%= link_to "Back", books_path %>
           </div>
@@ -25,10 +25,11 @@
       handler.buildMap({
         provider: {
           //maxZoom: 15,
-          minZoom: 10
+          //minZoom: 10
+          //Zoom: 3;
         },
         internal: {
-          id: "map"
+          id: "single_map"
         }
       }, function() {
         var markers;
