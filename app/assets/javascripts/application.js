@@ -19,4 +19,3 @@
 //= require markerclusterer
 //= require underscore
 //= require gmaps/google
-//= require turbolinks
