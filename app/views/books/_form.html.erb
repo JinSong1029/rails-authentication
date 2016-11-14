@@ -3,15 +3,14 @@
         <div class="header-content-inner">
           <div class="container">
             <%= simple_form_for @book do |f| %>
-              <%= f.input :title %>
+              <%= f.input :title%>
               <%= f.input :content %>
               <%= f.input :price %>
               <%= f.input :city %>
-              <%= f.button :submit %>
+              <%= f.button :submit%>
             <% end %>
+            <h3><%= link_to "back", books_path %></h3>
           </div>
         </div>
     </div>
 </header>
-
-<h3><%= link_to "back", books_path %></h3>
