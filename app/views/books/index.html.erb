@@ -68,15 +68,15 @@
                     }
                   }, function() {
                     <% @books.each do |book| %>
-                    var markers;
-                    //alert("<%= book.latitude %>")
-                    markers = handler.addMarkers([
-                      {
-                        lat: <%= book.latitude %>,
-                        lng: <%= book.longitude %>,
-                        infowindow: "holla"
-                      }
-                    ]);
+                      var markers;
+                      var contentString = '<div class="info" style="color:black;">' + '<%= book.title %>' + '</div>';
+                      markers = handler.addMarkers([
+                        {
+                          lat: <%= book.latitude %>,
+                          lng: <%= book.longitude %>,
+                          infowindow: contentString
+                        }
+                      ]);
                     <% end %>
                     //handler.bounds.extendWith(markers);
                     //handler.fitMapToBounds();
