@@ -7,6 +7,10 @@
             <h3> Content : <%= @book.content %> </h3>
             <h3> Price : <%= @book.price %> </h3>
             <h3> City : <%= @book.city %> </h3>
+            <%= image_tag @book.avatar.url %>
+            <%= image_tag @book.avatar.url(:medium) %>
+            <%= image_tag @book.avatar.url(:thumb) %>
+
             <div style="width:100%">
               <div id="single_map" style='width: 100%; height: 400px;'></div>
             </div>
