@@ -50,6 +50,8 @@ gem 'underscore-rails'
 gem 'geocoder'
 gem 'markerclustererplus-rails'
 
+#gem file for file uploading
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
