@@ -54,4 +54,5 @@ Rails.application.configure do
 
   #configuration for action mailer
   config.action_mailer.default_url_options = { host: "localhost", port: "3000"}
+  config.mailer_sender = "antonio.lee327@gmail.com"
 end
