@@ -33,6 +33,15 @@ gem 'jbuilder', '~> 2.5'
 
 # devise gem for authentication
 gem 'devise'
+# gem for oauth
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+gem 'omniauth-instagram'
+gem 'twitter'
+gem 'instagram'
+gem 'omniauth-google-oauth2'
+gem 'google-api-client', require: 'google/api_client'
 # gem "simple form for"
 gem 'simple_form'
 # gem for bootstrap
