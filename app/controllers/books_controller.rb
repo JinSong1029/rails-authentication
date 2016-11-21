@@ -10,6 +10,7 @@ class BooksController < ApplicationController
     end
   end
 
+  #Creating new book
   def new
     @book = Book.new
   end
