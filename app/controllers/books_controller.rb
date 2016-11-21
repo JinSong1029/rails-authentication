@@ -1,6 +1,7 @@
 class BooksController < ApplicationController
   before_action :authenticate_user!
 
+  #index Action
   def index
     @books = Book.all
     @hash = Gmaps4rails.build_markers(@books) do |book, marker|
