@@ -10,11 +10,12 @@ class BooksController < ApplicationController
     end
   end
 
-  #Creating new book
+  #Creating empty book
   def new
     @book = Book.new
   end
 
+  #Save real data to db
   def create
     @book = current_user.books.new(book_params)
     if @book.valid?
