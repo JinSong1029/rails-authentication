@@ -26,7 +26,7 @@ class BooksController < ApplicationController
       redirect_to new_book_path
     end
   end
-
+  #Edit action.
   def edit
     @book = Book.find(params[:id])
   end
